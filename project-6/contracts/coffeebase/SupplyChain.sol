@@ -301,7 +301,7 @@ contract SupplyChain is
         // Access Control List enforced by calling Smart Contract / DApp
         // Update the appropriate fields - ownerID, consumerID, itemState
         items[_upc].ownerID = payable(msg.sender);
-        items[_upc].retailerID = payable(msg.sender);
+        items[_upc].consumerID = payable(msg.sender);
         items[_upc].itemState = State.Purchased;
         itemsHistory[_upc].push("Purchased");
         // Emit the appropriate event
